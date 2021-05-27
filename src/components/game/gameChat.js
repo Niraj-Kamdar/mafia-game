@@ -77,7 +77,7 @@ function GameChat({room, threads, setThreads, setPlayerToRole}) {
             return {Notification: notification, type: "SYSTEM", _id: message._id}
         } else if (message.type === "SYSTEM" && message.to === identity.public.toString()) {
             if (message.subject === "RoleAssignment") {
-                const roleInfo = await axios.get(`${API_URL}/rooms/${room._id}/getRole`, {playerId: identity.toString()})
+                const roleInfo = await axios.get(`${API_URL}/rooms/${room._id}/getRole?playerId=${identity.toString()}`)
                 const role = roleInfo.role
                 // console.log(data)
                 // const privKey = PrivateKey.fromString(identity.toString())

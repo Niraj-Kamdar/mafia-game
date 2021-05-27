@@ -13,7 +13,7 @@ export const MetamaskContext = React.createContext(null)
 export const HubContext = React.createContext(null)
 export const UserContext = React.createContext(null)
 export const GAME_THREAD = "bafk65mkygxw5aqoxwkbhcktv4yjlyegc376w5ertwfihjftj74t5afa"
-export const API_URL = "https://cryptomafias-api.herokuapp.com"
+export const API_URL = /*"https://cryptomafias-api.herokuapp.com" ||*/ "http://localhost:5000"
 
 function App() {
     const [identity, setIdentity] = useState(null)
